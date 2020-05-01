@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Sans:ital,wght@1,100;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Fira Sans', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background: #cee4ac;
+   
+}
+.parent_container{
+    display: flex;
+    width: 100%;
+}
+.parent_container .sidebar{
+    position: relative;
+}
+.sidebar .inner_sidebar{
+   width: 280px;
+   position: fixed;
+   text-align: center;
+   top: 0;
+   left: 0;
+   height: 100%;
+   background: #362fed;
+   z-index: 999;
+   transition:all 0.3s ease;
+}
+.parent_container .main_container{
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    transition: all 0.3s ease;
+}
+.parent_container .inner_sidebar .profile_info{
+    padding: 30px 50px;
+    text-align: center ;
+}
+.profile_img{
+    width: 125px;
+    margin: 0 auto 15px;
+    
+}
+.profile_img img{
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+.inner_sidebar .profile_info .profile_data .name{
+   font-size: 22px;
+   font-weight: 700;
+   color: #fff;
+   text-transform: capitalize;
+}
+.inner_sidebar .profile_info .profile_data .wel{
+    font-weight: 300;
+    color: #88a3d0;
+}
+
+.sidebar_menu li a{
+    padding: 10px 50px;
+    display: flex;
+    height: 90px;
+    position: relative;
+    margin-bottom: 1px;
+    white-space:nowrap;
+    text-transform: capitalize;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Bangers', cursive;
+   
+}
+.sidebar_menu li a .icon{
+     margin-right: 10px;
+     font-size: 25px;
+     
+}
+.sidebar_menu li a span{
+    display: inline-block;
+}
+.sidebar_menu li a:hover,
+.sidebar_menu li a.active{
+    background: #080475;
+    color: #fff;
+}
+
+.parent_container .main_container .top_nav{
+    width: calc(100% - 280px);
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 15px 25px;
+    background: rgb(245, 235, 235);
+    position: fixed;
+    top: 0;
+    left: 280px;
+    box-shadow: 0 2px 2px rgba(0,0,0, 0.125);
+    transition: all 0.3s ease;
+}
+
+.parent_container .main_container .top_nav .hamburger{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.parent_container .main_container .top_nav .hamburger .fas{
+    font-size: 25px;
+    color: #88a3d0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.parent_container .main_container .top_nav .menu{
+    display: flex;
+    text-align: center;
+}
+.main_container .top_nav .menu li a{
+    margin: 0 15px;
+    padding: 0 15px;
+    position: relative;
+    color: #1d4c9e;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+}
+.main_container .top_nav .menu li a::before{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #362fed;
+    display: none;
+}
+
+.main_container .top_nav .menu li a.active,
+.main_container .top_nav .menu li a:hover
+{
+    color: #362fed;
+}
+.main_container .top_nav .menu li a.active::before,
+.main_container .top_nav .menu li a:hover::before{
+    display: block;
+
+}
+.main_container .top_nav .right_menu ul li{
+    position: relative;
+}
+.main_container .top_nav .right_menu ul li .fas{
+    font-size: 22px;
+    cursor: pointer;
+    cursor: #525353;
+}
+
+.main_container .top_nav .right_menu ul li .profile_dd{
+    position: absolute;
+    top: 35px;
+    right: -10px;
+    width: 180px;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0, 0.5);
+    border-radius: 3px;
+    user-select:none;
+    display: none;
+}
+.main_container .top_nav .right_menu ul li .profile_dd .dd_item{
+   padding: 10px;
+   cursor: pointer;
+   cursor:#525353;
+   
+}
+.main_container .top_nav .right_menu ul li .profile_dd .dd_item:hover{
+    background-color: rgba(0,0,0,0.4);
+
+}
+
+.main_container .top_nav .right_menu ul li .profile_dd:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+}
+.main_container .top_nav .right_menu ul li .profile_dd.active{
+    display: block;
+}
+
+
+.parent_container .main_container .container{
+    padding: 30px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.parent_container .main_container .container .item{
+    background: #fff;
+    border-bottom: 1px solid #d9e2e7;
+    width: 30%;
+    height: 280px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px rgba(0,0,0, 0.3);
+}
+.item h3{
+text-transform: uppercase;
+font-size: 30px;
+margin: 10px auto;
+font-weight: 800;
+color: #f09205;
+}
+.item-head{
+    width: 100%;
+    
+    text-align: center;
+    border-bottom: 1px solid #d9e2e7;
+    background: #cfcdcd;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 22px;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+.item p{
+    margin-bottom: 30px;
+}
+.item-title{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #d9e2e7;
+    background: #f1f0f0;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 22px;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+small{
+    padding: 10px;
+    color: #525353;
+}
+.amount{
+    text-align: center;
+    padding: 10px;
+    background:#f1f0f0;
+    margin-top: 30px;
+}
+.payment-icon{
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.pay-icon{
+    width: 40%;
+    margin-right: 5px;
+}
+.d-btn{
+   padding: 8px 15px;
+   color: #fff;
+   background: #1d4c9e;
+   cursor: pointer;
+   margin: 3px;
+}
+.d-btn2{
+    padding: 8px 15px;
+    color: #fff;
+    background: #1d4c9e;
+    cursor: pointer; 
+    
+}
+.item-3{
+       
+     color: #fff;
+}
+.item-3 p{
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 35px; 
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.item  p .price{
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #f09205;
+}
+
+
+
+
+
+

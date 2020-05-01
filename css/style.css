@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap');
+
+
+ section.sec1{
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     background: #000;
+     background-size: cover;
+     display: flex;
+     padding: 0 100px;
+     justify-content: center;
+     align-items: center;
+ }
+ .sec1::before{
+     content: "";
+     position: absolute;
+     right: 0;
+     top: 0;
+     width: 400px;
+     height: 100%;
+     background: #04c434;
+     transform-origin: top;
+     transform: skewX(-25deg);
+     z-index: 1;
+     animation: fade-in 0.5s ease-in forwards;
+     animation-delay: 1.5s;
+     opacity: 0;
+ }
+
+ .sec1 video{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     opacity: 0.15;
+     pointer-events: none;
+ }
+ .sec1 .textBox{
+     position: relative;
+     max-width: 600px;
+     z-index: 2;
+ }
+ .sec1 .textBox h2{
+     font-size: 2.5em;
+     color: #fff;
+     text-transform: capitalize;
+     margin-bottom: 10px;
+     font-family: 'Abril Fatface', cursive;
+     animation: left-in 0.5s ease-in forwards;
+     animation-delay: 0.1s;
+     opacity: 0;
+ }
+ .sec1 .textBox p{
+     color: #fff;
+     font-size: 1.2em;
+     margin: 5px 0 25px; 
+     line-height: 20px;
+     letter-spacing: 1.4px;
+     animation: left-in 0.6s ease-in forwards;
+     animation-delay: 0.3s;
+     opacity: 0;
+ }
+ .sec1 .textBox a{
+     position: relative;
+     display: inline-block;
+     background: rgb(243, 241, 241);
+     color: #111;
+     padding: 10px 20px;
+     text-decoration: none;
+     font-size: 1em;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     font-weight: 500;
+     border: 2px solid #04c434;
+     animation: left-in 0.7s ease-in forwards;
+     animation-delay: 0.5s;
+     opacity: 0;
+ }
+ .sec1 .textBox a:hover{
+     background-color: #04c434;
+     color: #f7f7f7;
+     
+ }
+
+ .sec1 .imgBox{
+     position: relative;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width:50%;
+     z-index: 2;
+ }
+ .sec1 .imgBox img{
+     position: absolute;
+     bottom: 0;
+     height: 90%;
+     z-index: 10000;
+     animation: fade-in 0.5s ease-in forwards;
+     animation-delay: 2s;
+     opacity: 0;
+ }
+
+ .about-container{
+     display:grid;
+     grid-gap:10px;
+     grid-template-columns: auto auto;
+     margin-top: 40px;
+     margin-bottom: 40px;
+ }
+ .about-container .about-col{
+    padding: 10px 20px;
+ }
+ .about-container .about-col h2{
+     font-size: 2em;
+     font-weight: 800;
+     font-family:'Abril Fatface', cursive;
+     text-transform: uppercase;
+     padding: 10px;
+
+ }
+ .about-container .about-col p{
+     padding: 10px;
+     font-size: 20px;
+     font-weight: 500;
+     letter-spacing: 2px;
+     line-height: 28px;
+     word-spacing: 2px;
+     font-family: 'Bree Serif', serif;
+ }
+ .about-container .about-col .btn{
+     width: 300px;
+     padding: 10px 16px;
+     display: block;
+     background: #014e05;
+     color: #fff;
+     border-radius: 5px;
+     margin-right: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+ }
+ .about-container .about-col .btn:hover{
+     background: #5cf545;
+     border: 2px solid #fff;
+ }
+
+ .list-wrapper{
+     width: 80%;
+     margin: 10px auto;
+ }
+ .list-wrapper h1{
+     font-size: 2.5em;
+     font-weight: 700;
+     text-transform: uppercase;
+     text-align: center;
+     font-family:'Abril Fatface', cursive;
+     margin-bottom: 10px;
+ }
+ .list-wrapper .accordion-wrap .accordion-header{
+     width: 100%;
+     height: 50px;
+     padding: 15px;
+     background: brown;
+     position: relative;
+     color: #f7f7f7;
+     cursor: pointer;
+     border-bottom: 2px solid #04c434;
+ }
+.list-wrapper .accordion-wrap .accordion-header:hover{
+     color: #bbb9b9;
+     border-bottom: 2px solid #111;   
+ }
+ .list-wrapper .accordion-wrap .accordion-header::before,
+ .list-wrapper .accordion-wrap .accordion-header::after{
+     content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      width: 20px;
+      height: 2px;
+      background: #000;
+
+ }
+ .list-wrapper .accordion-wrap .accordion-header::after{
+     transform: rotate(-90deg);
+     transition: all 0.5s ease;
+ }
+
+ .list-wrapper .accordion-wrap:first-child .accordion-header{
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+ }
+ .list-wrapper .accordion-wrap:last-child .accordion-header{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: 2px solid transparent;
+}
+ .list-wrapper .accordion-wrap .accordion-header h4{
+     font-size: 1.5em;
+     font-weight: 500;
+     text-align: center;
+     text-transform: capitalize;
+     font-family: 'Bree Serif', serif;
+     
+ }
+
+ .list-wrapper .accordion-wrap .accordion-content{
+     width: 100%;
+     height: 0;
+     overflow: hidden;
+     background: rgba(217, 153, 132, 0.7);
+     transition: all 0.5s ease;
+ }
+ .list-wrapper .accordion-wrap .accordion-content p{
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 22px;
+     color: #fff;
+     padding:  25px 15px;
+ }
+ .list-wrapper .accordion-wrap .accordion-header.active{
+     background: rgba(245, 92, 61, 0.8);
+     color: rgba(0, 0,0, 0.8);
+ }
+ .list-wrapper .accordion-wrap .accordion-header.active::before,
+ .list-wrapper .accordion-wrap .accordion-header.active::after{
+    background: rgba(0, 0,0, 0.8);
+ }
+ .list-wrapper .accordion-wrap .accordion-header.active::after{
+     transform: rotate(0);
+ }
+
+ .list-wrapper .accordion-wrap .accordion-header.active + .accordion-content{
+     height: 180px;
+ }
+
+
+ /* service section  */
+ .service-section{
+     background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) , url(../imgs/bg2.jpg);
+     background-size: cover;
+     padding: 60px 0;
+     
+ }
+ .inner-width{
+     width: 100%;
+     max-width: 1200px;
+     margin: auto;
+     padding: 0 20px;
+     overflow: hidden;
+ }
+ .section-title{
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 2em;
+     color: #ddd;
+     font-weight: 700;
+     font-family: 'Abril Fatface', cursive;
+
+ }
+ .border{
+     width: 200px;
+     height: 2px;
+     background-color: #04c434;
+     margin: 30px auto;
+ }
+ .service-container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ .service-box{
+     width: 25%;
+     padding: 10px;
+     color: #ddd;
+     text-align: center;
+     cursor: pointer;
+     
+ }
+ .service-icon{
+     display: inline-block;
+     width: 60px;
+     height: 60px;
+     border: 3px solid #04c434;
+     color: #04c434;
+     transform: rotate(45deg);
+     margin-bottom: 20px;
+     margin-top: 10px;
+ }
+ .service-icon i{
+     line-height: 60px;
+     transform: rotate(-45deg);
+     font-size: 24px;
+ }
+ .service-box:hover .service-icon{
+     background: #04c434;
+     color: #ddd;
+ }
+ .service-title{
+     text-transform: uppercase;
+     font-size: 20px;
+     margin-bottom: 10px;
+     font-weight: 500;
+ }
+ .subtitle{
+     color: #04c434;
+ }
+ .desc{
+    font-size: 16px;
+ }
+
+ /* client section  */
+
+ .client-section{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     padding: 10px 0;
+     margin-top: 20px;
+ }
+ .client-box{
+     width: 40%;
+     padding: 10px;
+   
+ }
+ .client-box h2{
+     font-size: 2.4em;
+     text-transform: uppercase;
+     padding: 10px;
+     font-weight: 700;
+     font-family: 'Abril Fatface', cursive;
+     color: #222;
+     text-align: left;
+ }
+ .client-box .client-text{
+     width: 80%;
+     padding: 10px;
+ }
+ .client-box .client-text p{
+     font-size: 22px;
+     font-weight: 500;
+     letter-spacing: 2px;
+     line-height: 26px;
+     font-family: 'Bree Serif', serif;
+     color: rgb(58, 57, 57);
+ }
+ .client-img{
+     width: 100%;
+     position: relative;
+     margin: 10px auto;
+ }
+
+ .subborder{
+    width: 500px;
+    height: 12px;
+    background-color: #04c434;
+    margin-bottom: 20px;
+ }
+
+ 
+
+
+
+
+
+
+ @keyframes left-in
+ {
+     0%{
+         transform: translateX(-200px);
+         opacity: 0;
+     }
+     100%{
+         opacity: 1;
+         transform: translateX(0px);
+     }
+ }
+
+ @keyframes fade-in
+ {
+     0%{
+         opacity: 0;
+     }
+     100%{
+         opacity: 1;
+     }
+ }
+
+
+
+
+
+
+
+
+
